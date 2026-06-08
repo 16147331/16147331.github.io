@@ -3,127 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- این بخش برای گوگل خیلی مهمه -->
-    <title>آموزش برنامه‌نویسی محمد طاها | اسکرچ، پایتون و mBlock</title>
-    <meta name="description" content="وب‌سایت رسمی محمد طاها برای آموزش برنامه‌نویسی به دانش‌آموزان. آموزش اسکرچ، پایتون و مفاهیم کامپیوتر.">
-    <meta name="keywords" content="محمد طاها، آموزش برنامه نویسی، اسکرچ، پایتون، mBlock، برنامه نویسی نوجوانان">
+    <title>آکادمی برنامه‌نویسی و هوش مصنوعی محمد طاها</title>
+    <meta name="description" content="آموزش برنامه‌نویسی، رباتیک و هوش مصنوعی توسط محمد طاها. یادگیری اسکرچ، پایتون و مهارت‌های ICDL.">
     
     <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #27ae60;
+            --bg-color: #f4f7f6;
+        }
+
         body {
-            font-family: 'Tahoma', sans-serif;
-            background-color: #f0f2f5;
+            font-family: 'Tahoma', 'Segoe UI', sans-serif;
+            background-color: var(--bg-color);
             margin: 0;
             padding: 0;
             color: #333;
+            line-height: 1.6;
         }
+
         header {
-            background-color: #2c3e50;
+            background: linear-gradient(135deg, #1a2a3a 0%, #2c3e50 100%);
             color: white;
-            padding: 40px 20px;
+            padding: 60px 20px;
             text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
-        header h1 { margin: 0; font-size: 2.5em; }
-        header p { margin: 10px 0 0; opacity: 0.9; }
+
+        header h1 { margin: 0; font-size: 2.8em; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        header p { margin: 15px 0 0; font-size: 1.2em; opacity: 0.9; }
 
         .container {
-            max-width: 1200px;
-            margin: 40px auto;
+            max-width: 1100px;
+            margin: -30px auto 40px;
+            padding: 0 20px;
+        }
+
+        .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 25px;
-            padding: 0 20px;
         }
 
         .card {
             background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+            border-radius: 20px;
+            padding: 30px;
             text-align: center;
-            border-bottom: 5px solid #27ae60;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-top: 6px solid var(--accent-color);
         }
 
-        .card:hover { transform: translateY(-10px); }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(0,0,0,0.15); }
 
-        .card-content { padding: 25px; }
-        
-        .card h2 {
-            color: #2c3e50;
-            font-size: 1.4em;
-            margin-bottom: 15px;
-        }
+        .card h2 { color: var(--primary-color); margin-bottom: 15px; }
 
         .btn {
             display: inline-block;
-            background-color: #27ae60;
+            background-color: var(--accent-color);
             color: white;
-            padding: 12px 25px;
+            padding: 12px 30px;
             text-decoration: none;
-            border-radius: 25px;
+            border-radius: 50px;
             font-weight: bold;
-            transition: background 0.3s;
+            transition: 0.3s;
         }
 
-        .btn:hover { background-color: #219150; }
+        .btn:hover { background-color: #219150; transform: scale(1.05); }
+
+        /* بخش درباره من جدید */
+        .about-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-top: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-right: 8px solid var(--primary-color);
+        }
+
+        .about-section h2 { color: var(--primary-color); border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        
+        .skills-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .tag {
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
 
         footer {
             text-align: center;
-            padding: 30px;
-            background: #2c3e50;
+            padding: 40px;
+            background: var(--primary-color);
             color: white;
-            margin-top: 50px;
+            margin-top: 60px;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>🚀 آکادمی برنامه‌نویسی محمد طاها</h1>
-    <p>یادگیری لذت‌بخش کامپیوتر و برنامه‌نویسی از مقدماتی تا پیشرفته</p>
+    <h1>🚀 آکادمی محمد طاها</h1>
+    <p>مرجع آموزش برنامه‌نویسی، رباتیک و هوش مصنوعی</p>
 </header>
 
 <div class="container">
-    <!-- کارت ۱ -->
-    <div class="card">
-        <div class="card-content">
-            <h2>آموزش Scratch Jr</h2>
-            <p>شروع مسیر برنامه‌نویسی برای قهرمانان کوچک</p>
-            <a href="https://www.aparat.com/16147331" class="btn">ورود به دوره</a>
+    <div class="grid">
+        <div class="card">
+            <h2>Scratch Jr</h2>
+            <p>آموزش مقدماتی برای قهرمانان کوچک</p>
+            <a href="https://www.aparat.com/16147331" class="btn">مشاهده ویدیوها</a>
+        </div>
+        <div class="card">
+            <h2>Scratch 3</h2>
+            <p>بازی‌سازی و انیمیشن‌سازی پیشرفته</p>
+            <a href="https://www.aparat.com/16147331" class="btn">مشاهده ویدیوها</a>
+        </div>
+        <div class="card">
+            <h2>mBlock</h2>
+            <p>برنامه‌نویسی رباتیک و سخت‌افزار</p>
+            <a href="https://www.aparat.com/16147331" class="btn">مشاهده ویدیوها</a>
+        </div>
+        <div class="card">
+            <h2>Python</h2>
+            <p>زبان برنامه‌نویسی حرفه‌ای و کاربردی</p>
+            <a href="https://www.aparat.com/16147331" class="btn">مشاهده ویدیوها</a>
         </div>
     </div>
 
-    <!-- کارت ۲ -->
-    <div class="card">
-        <div class="card-content">
-            <h2>آموزش Scratch 3</h2>
-            <p>ساخت بازی و انیمیشن‌های حرفه‌ای با اسکرچ</p>
-            <a href="https://www.aparat.com/16147331" class="btn">ورود به دوره</a>
-        </div>
-    </div>
-
-    <!-- کارت ۳ -->
-    <div class="card">
-        <div class="card-content">
-            <h2>آموزش mBlock</h2>
-            <p>برنامه‌نویسی ربات‌ها و پروژه‌های هوشمند</p>
-            <a href="https://www.aparat.com/16147331" class="btn">ورود به دوره</a>
-        </div>
-    </div>
-
-    <!-- کارت ۴ -->
-    <div class="card">
-        <div class="card-content">
-            <h2>آموزش پایتون (Python)</h2>
-            <p>یادگیری زبان برنامه‌نویسی محبوب و قدرتمند</p>
-            <a href="https://www.aparat.com/16147331" class="btn">ورود به دوره</a>
+    <!-- بخش درباره من که خواسته بودی -->
+    <div class="about-section">
+        <h2>👤 درباره مدرس</h2>
+        <p>سلام! من <strong>محمد طاها</strong> هستم، یک برنامه‌نویس حرفه‌ای و مدرس این دوره‌های آموزشی. هدف من در این سایت، آموزش برنامه‌نویسی به زبانی ساده و آشنا کردن شما با دنیای شگفت‌انگیز هوش مصنوعی است.</p>
+        <p>من مسیر علمی خودم را با گذراندن دوره <strong>ICDL</strong> شروع کردم و در ادامه وارد دنیای جذاب <strong>رباتیک</strong> شدم. من تخصص‌های لازم در بخش‌های <strong>مکانیک، الکترونیک و برنامه‌نویسی ربات</strong> را کسب کرده‌ام و در حال حاضر تسلط کامل بر مفاهیم <strong>هوش مصنوعی</strong> و کار با ابزارهای آن را دارم.</p>
+        <p>در این آکادمی، من تمام تجربیاتم در کار با برنامه‌های اسکرچ، ام‌بلاک و پایتون را با شما به اشتراک می‌گذارم.</p>
+        
+        <div class="skills-tags">
+            <span class="tag">💻 برنامه نویس حرفه‌ای</span>
+            <span class="tag">🤖 متخصص رباتیک</span>
+            <span class="tag">🧠 هوش مصنوعی</span>
+            <span class="tag">📜 گواهینامه ICDL</span>
+            <span class="tag">🐍 پایتون</span>
         </div>
     </div>
 </div>
 
 <footer>
-    <p>تمامی حقوق برای وب‌سایت آموزشی محمد طاها محفوظ است © ۲۰۲۶</p>
+    <p>تمامی حقوق برای وب‌سایت <a href="https://16147331.github.io/" style="color: white; text-decoration: none;">محمد طاها</a> محفوظ است © ۲۰۲۶</p>
 </footer>
 
 </body>
