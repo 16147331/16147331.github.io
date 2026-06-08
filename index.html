@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>آکادمی برنامه‌نویسی و هوش مصنوعی محمد طاها</title>
-    <meta name="description" content="آموزش برنامه‌نویسی، رباتیک و هوش مصنوعی توسط محمد طاها. یادگیری اسکرچ، پایتون و مهارت‌های ICDL.">
+    <meta name="description" content="آموزش برنامه‌نویسی، رباتیک و هوش مصنوعی توسط محمد طاها.">
     
     <style>
         :root {
             --primary-color: #2c3e50;
             --accent-color: #27ae60;
             --bg-color: #f4f7f6;
+            --text-color: #333;
         }
 
         body {
@@ -18,7 +19,7 @@
             background-color: var(--bg-color);
             margin: 0;
             padding: 0;
-            color: #333;
+            color: var(--text-color);
             line-height: 1.6;
         }
 
@@ -39,6 +40,7 @@
             padding: 0 20px;
         }
 
+        /* بخش کارت‌های دوره‌ها */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -56,7 +58,6 @@
         }
 
         .card:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(0,0,0,0.15); }
-
         .card h2 { color: var(--primary-color); margin-bottom: 15px; }
 
         .btn {
@@ -68,36 +69,44 @@
             border-radius: 50px;
             font-weight: bold;
             transition: 0.3s;
+            margin-top: 15px;
         }
 
         .btn:hover { background-color: #219150; transform: scale(1.05); }
 
-        /* بخش درباره من جدید */
+        /* بخش درباره مدرس (که قبلاً نبود) */
         .about-section {
             background: white;
             border-radius: 20px;
             padding: 40px;
             margin-top: 50px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            border-right: 8px solid var(--primary-color);
+            border-right: 10px solid var(--primary-color);
         }
 
-        .about-section h2 { color: var(--primary-color); border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        .about-section h2 { 
+            color: var(--primary-color); 
+            border-bottom: 2px solid #eee; 
+            padding-bottom: 15px;
+            margin-top: 0;
+        }
         
+        .about-text { font-size: 1.1em; color: #555; margin-bottom: 25px; }
+
         .skills-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 20px;
+            gap: 12px;
         }
 
         .tag {
             background: #e8f5e9;
             color: #2e7d32;
-            padding: 5px 15px;
-            border-radius: 15px;
-            font-size: 0.9em;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 0.95em;
             font-weight: bold;
+            border: 1px solid #c8e6c9;
         }
 
         footer {
@@ -107,58 +116,63 @@
             color: white;
             margin-top: 60px;
         }
+
+        footer a { color: #27ae60; text-decoration: none; font-weight: bold; }
     </style>
 </head>
 <body>
 
 <header>
     <h1>🚀 آکادمی محمد طاها</h1>
-    <p>مرجع آموزش برنامه‌نویسی، رباتیک و هوش مصنوعی</p>
+    <p>یادگیری لذت‌بخش کامپیوتر و برنامه‌نویسی از مقدماتی تا پیشرفته</p>
 </header>
 
 <div class="container">
+    <!-- بخش دوره‌ها -->
     <div class="grid">
         <div class="card">
             <h2>Scratch Jr</h2>
-            <p>آموزش مقدماتی برای قهرمانان کوچک</p>
-            <a href="https://www.aparat.com/16147331" class="btn">مشاهده ویدیوها</a>
+            <p>شروع مسیر برنامه‌نویسی برای قهرمانان کوچک</p>
+            <a href="https://www.aparat.com/16147331" class="btn">ورود به دوره</a>
         </div>
         <div class="card">
             <h2>Scratch 3</h2>
-            <p>بازی‌سازی و انیمیشن‌سازی پیشرفته</p>
-            <a href="https://www.aparat.com/16147331" class="btn">مشاهده ویدیوها</a>
+            <p>ساخت بازی و انیمیشن‌های حرفه‌ای با اسکرچ</p>
+            <a href="https://www.aparat.com/16147331" class="btn">ورود به دوره</a>
         </div>
         <div class="card">
             <h2>mBlock</h2>
-            <p>برنامه‌نویسی رباتیک و سخت‌افزار</p>
-            <a href="https://www.aparat.com/16147331" class="btn">مشاهده ویدیوها</a>
+            <p>برنامه‌نویسی ربات‌ها و پروژه‌های هوشمند</p>
+            <a href="https://www.aparat.com/16147331" class="btn">ورود به دوره</a>
         </div>
         <div class="card">
-            <h2>Python</h2>
-            <p>زبان برنامه‌نویسی حرفه‌ای و کاربردی</p>
-            <a href="https://www.aparat.com/16147331" class="btn">مشاهده ویدیوها</a>
+            <h2>پایتون (Python)</h2>
+            <p>یادگیری زبان برنامه‌نویسی محبوب و قدرتمند</p>
+            <a href="https://www.aparat.com/16147331" class="btn">ورود به دوره</a>
         </div>
     </div>
 
-    <!-- بخش درباره من که خواسته بودی -->
+    <!-- بخش درباره مدرس (رزومه محمد طاها) -->
     <div class="about-section">
         <h2>👤 درباره مدرس</h2>
-        <p>سلام! من <strong>محمد طاها</strong> هستم، یک برنامه‌نویس حرفه‌ای و مدرس این دوره‌های آموزشی. هدف من در این سایت، آموزش برنامه‌نویسی به زبانی ساده و آشنا کردن شما با دنیای شگفت‌انگیز هوش مصنوعی است.</p>
-        <p>من مسیر علمی خودم را با گذراندن دوره <strong>ICDL</strong> شروع کردم و در ادامه وارد دنیای جذاب <strong>رباتیک</strong> شدم. من تخصص‌های لازم در بخش‌های <strong>مکانیک، الکترونیک و برنامه‌نویسی ربات</strong> را کسب کرده‌ام و در حال حاضر تسلط کامل بر مفاهیم <strong>هوش مصنوعی</strong> و کار با ابزارهای آن را دارم.</p>
-        <p>در این آکادمی، من تمام تجربیاتم در کار با برنامه‌های اسکرچ، ام‌بلاک و پایتون را با شما به اشتراک می‌گذارم.</p>
+        <div class="about-text">
+            <p>سلام! من <strong>محمد طاها</strong> هستم، یک دانش‌آموز کنجکاو و عاشق دنیای تکنولوژی. مسیر من با یادگیری مهارت‌های <strong>ICDL</strong> شروع شد و به سرعت به سمت دنیای هیجان‌انگیز <strong>رباتیک</strong> کشیده شدم.</p>
+            <p>من دوره‌های تخصصی رباتیک را در بخش‌های <strong>مکانیک و الکترونیک</strong> گذرانده‌ام و حالا به برنامه‌نویسی سخت‌افزار و نرم‌افزار مسلط هستم. همچنین، در حال حاضر به صورت عمیق بر روی مفاهیم <strong>هوش مصنوعی</strong> و کاربردهای آن فعالیت می‌کنم.</p>
+            <p>هدف من در این وب‌سایت، انتقال آموخته‌هایم به شماست تا با هم در دنیای صفر و یک پیشرفت کنیم!</p>
+        </div>
         
         <div class="skills-tags">
-            <span class="tag">💻 برنامه نویس حرفه‌ای</span>
-            <span class="tag">🤖 متخصص رباتیک</span>
-            <span class="tag">🧠 هوش مصنوعی</span>
+            <span class="tag">💻 برنامه‌نویس حرفه‌ای</span>
+            <span class="tag">🤖 متخصص رباتیک (مکانیک و الکترونیک)</span>
+            <span class="tag">🧠 هوش مصنوعی (AI)</span>
             <span class="tag">📜 گواهینامه ICDL</span>
-            <span class="tag">🐍 پایتون</span>
+            <span class="tag">🐍 تسلط بر پایتون</span>
         </div>
     </div>
 </div>
 
 <footer>
-    <p>تمامی حقوق برای وب‌سایت <a href="https://16147331.github.io/" style="color: white; text-decoration: none;">محمد طاها</a> محفوظ است © ۲۰۲۶</p>
+    <p>تمامی حقوق برای وب‌سایت آموزشی <a href="#">محمد طاها</a> محفوظ است © ۲۰۲۶</p>
 </footer>
 
 </body>
