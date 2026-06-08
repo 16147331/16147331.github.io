@@ -3,46 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>آکادمی برنامه‌نویسی محمد طاها</title>
+    <title>آکادمی برنامه‌نویسی محمد طاها | جایی که کدها به واقعیت تبدیل می‌شوند</title>
     <style>
-        body { font-family: Tahoma, sans-serif; line-height: 1.6; margin: 20px; background-color: #f4f4f9; }
-        .container { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        h1, h2 { color: #333; }
-        .section { margin-bottom: 20px; padding: 15px; border-bottom: 1px solid #ddd; }
-        .btn { display: inline-block; padding: 10px 20px; background: #007bff; color: white; text-decoration: none; border-radius: 5px; }
+        :root {
+            --primary-purple: #8e7dff;
+            --dark-bg: #2d3436;
+            --soft-white: #f9f9f9;
+        }
+
+        body {
+            font-family: 'Tahoma', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--soft-white);
+            color: #333;
+            text-align: center;
+        }
+
+        /* هدر بنفش جذاب */
+        header {
+            background-color: var(--primary-purple);
+            color: white;
+            padding: 60px 20px;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+
+        header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        header p { font-size: 1.2rem; opacity: 0.9; }
+
+        /* بخش دوره‌های آموزشی */
+        .courses-section { padding: 50px 20px; }
+        .course-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* کارت‌های قابل کلیک */
+        .course-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            width: 200px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none; /* حذف خط زیر لینک */
+            color: inherit;
+            display: block;
+            border-bottom: 5px solid transparent;
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(142, 125, 255, 0.2);
+            border-bottom: 5px solid var(--primary-purple);
+        }
+
+        .course-card span { font-size: 50px; display: block; margin-bottom: 15px; }
+        .course-card h3 { color: var(--primary-purple); margin-bottom: 10px; }
+        .course-card p { font-size: 0.9rem; line-height: 1.5; color: #666; }
+
+        /* بخش درباره مدرس */
+        .about-section {
+            background: white;
+            margin: 40px auto;
+            padding: 40px;
+            width: 85%;
+            border-radius: 30px;
+            border: 2px solid #eee;
+            position: relative;
+        }
+
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .skill-tag {
+            padding: 8px 20px;
+            border-radius: 25px;
+            border: 1px solid var(--primary-purple);
+            color: var(--primary-purple);
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+
+        /* پروژه برتر ماه */
+        .top-project {
+            border: 3px solid var(--primary-purple);
+            margin: 40px auto;
+            padding: 40px;
+            width: 85%;
+            border-radius: 30px;
+        }
+
+        /* تالار گفتگو با دکمه صورتی */
+        .forum-section {
+            background-color: var(--dark-bg);
+            color: white;
+            padding: 60px 20px;
+            border-radius: 40px;
+            width: 90%;
+            margin: 40px auto;
+        }
+
+        .pink-btn {
+            background: #ff79c6;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
+            box-shadow: 0 0 20px rgba(255, 121, 198, 0.4);
+            transition: 0.3s;
+        }
+
+        .pink-btn:hover { transform: scale(1.05); filter: brightness(1.1); }
+
+        footer { padding: 30px; color: #999; font-size: 0.8rem; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>به وب‌سایت محمد طاها خوش آمدید</h1>
-        <p>در این وب‌سایت قرار است با هم دنیای کدها را کشف کنیم!</p>
 
-        <div class="section">
-            <h2>📺 دوره‌های آموزشی</h2>
-            <p>برای مشاهده ویدیوهای آموزشی من در آپارات، روی دکمه زیر کلیک کنید:</p>
-            <a href="https://www.aparat.com/16147331" target="_blank" class="btn">ورود به کانال آپارات محمد طاها</a>
-        </div>
+    <header>
+        <h1>آکادمی برنامه‌نویسی محمد طاها 🚀</h1>
+        <p>جایی که کدها به واقعیت تبدیل می‌شوند</p>
+    </header>
 
-        <div class="section">
-            <h2>🎮 بهترین بازی ماهانه</h2>
-            <p>بازی پیشنهادی این ماه: <strong>Minecraft</strong> (برای تقویت خلاقیت و ساخت‌وساز!)</p>
-        </div>
+    <div class="courses-section">
+        <h2>📚 دوره‌های آموزشی</h2>
+        <div class="course-grid">
+            <!-- تمام کارت‌ها لینک شده به آپارات -->
+            <a href="https://www.aparat.com/16147331" class="course-card">
+                <span>🧠</span>
+                <h3>هوش مصنوعی</h3>
+                <p>آشنایی با یادگیری ماشین و ساخت سیستم‌های هوشمند.</p>
+            </a>
 
-        <div class="section">
-            <h2>✍️ ارسال نظر و ارتباط با من</h2>
-            <p>نظرات و سوالات خود را از طریق فرم زیر برای من ارسال کنید:</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScyuIskLzT08_8h6n6jHhV5CgA0G0_Y6w8XFzD5p5Y_x6w/viewform" target="_blank" class="btn" style="background: #28a745;">باز کردن فرم تماس</a>
-        </div>
+            <a href="https://www.aparat.com/16147331" class="course-card">
+                <span>🐍</span>
+                <h3>Python</h3>
+                <p>آموزش حرفه‌ای پایتون برای توسعه، هوش مصنوعی و پروژه‌های پیشرفته.</p>
+            </a>
 
-        <div class="section">
-            <h2>👨‍🏫 درباره مدرس</h2>
-            <p>
-                محمد طاها یک دانش‌آموز کنجکاو و علاقه‌مند به دنیای بی‌انتهای کامپیوتر و برنامه‌نویسی است. 
-                او با اشتیاق زیاد در حال یادگیری زبان‌های مختلف و مهارت‌های فنی است تا بتواند ایده‌های ذهنی‌اش را به واقعیت تبدیل کند.
-                هدف او از راه‌اندازی این آکادمی، ایجاد فضایی ساده و دوستانه برای دانش‌آموزانی است که مثل خودش عاشق تکنولوژی هستند. 
-                او معتقد است که برنامه‌نویسی فقط کد زدن نیست، بلکه راهی برای بهتر فکر کردن و حل مسائل پیچیده زندگی است و تلاش می‌کند این مسیر را برای دیگران هم هموار کند.
-            </p>
+            <a href="https://www.aparat.com/16147331" class="course-card">
+                <span>🤖</span>
+                <h3>mBlock & Robotics</h3>
+                <p>یادگیری رباتیک، سنسورها و ساخت پروژه‌های واقعی.</p>
+            </a>
+
+            <a href="https://www.aparat.com/16147331" class="course-card">
+                <span>🐱</span>
+                <h3>Scratch 3.0</h3>
+                <p>ساخت بازی، انیمیشن و داستان تعاملی با گربه محبوب اسکرچ.</p>
+            </a>
+
+            <a href="https://www.aparat.com/16147331" class="course-card">
+                <span>👦</span>
+                <h3>Scratch Jr</h3>
+                <p>آموزش برنامه‌نویسی پایه برای کودکان با محیط کاملاً تصویری.</p>
+            </a>
         </div>
     </div>
+
+    <div class="about-section">
+        <h2>👨‍🏫 درباره مدرس (محمد طاها)</h2>
+        <p style="line-height: 1.8; text-align: justify; padding: 0 20px;">
+            من محمد طاها هستم، مدرس برنامه‌نویسی و علاقه‌مند به دنیای بی‌پایان تکنولوژی. هدف من از راه‌اندازی این آکادمی، آموزش مفهومی و کاربردی مهارت‌های دیجیتال به نسل آینده است. من معتقدم برنامه‌نویسی صرفاً نوشتن کد نیست، بلکه زبانی برای حل مسئله و تقویت خلاقیت است. در این مسیر، من تجربیات خودم را در زمینه‌های مختلف از جمله پایتون، هوش مصنوعی و رباتیک با زبانی ساده و جذاب به اشتراک می‌گذارم تا هر دانش‌آموزی بتواند ایده‌های ذهنی‌اش را به پروژه‌های واقعی تبدیل کند. یادگیری با من، یک ماجراجویی هیجان‌انگیز در دنیای صفر و یک‌هاست!
+        </p>
+        <div class="skills-container">
+            <div class="skill-tag">ICDL 1 & 2 🏆</div>
+            <div class="skill-tag">مکانیک رباتیک ⚙️</div>
+            <div class="skill-tag">الکترونیک ⚡</div>
+            <div class="skill-tag">Python Developer 🐍</div>
+            <div class="skill-tag">Scratch Instructor 🐱</div>
+            <div class="skill-tag">mBlock Expert 🤖</div>
+            <div class="skill-tag">HTML / CSS 🌐</div>
+        </div>
+    </div>
+
+    <div class="top-project">
+        <h2>🎮 پروژه برتر ماه</h2>
+        <p>به زودی بهترین پروژه ساخته شده در آکادمی اینجا نمایش داده می‌شود.</p>
+        <img src="https://via.placeholder.com/150" alt="پروژه برتر" style="border-radius: 15px; margin-top: 10px;">
+    </div>
+
+    <div class="forum-section">
+        <h2>💬 تالار گفتگو و پرسش‌وپاسخ</h2>
+        <p>هر سوالی داری از طریق فرم زیر بپرس.</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScyuIskLzT08_8h6n6jHhV5CgA0G0_Y6w8XFzD5p5Y_x6w/viewform" class="pink-btn">شروع گفتگو با محمد طاها</a>
+    </div>
+
+    <footer>
+        تمامی حقوق محفوظ است © ۲۰۲۶ | طراحی شده توسط محمد طاها
+    </footer>
+
 </body>
 </html>
