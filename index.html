@@ -1,164 +1,254 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>آکادمی برنامه‌نویسی محمد طاها | مرجع تخصصی آموزش</title>
-    <style>
-        :root {
-            --primary: #6c5ce7;
-            --secondary: #a29bfe;
-            --accent: #fd79a8;
-            --light: #f9f9f9;
-            --dark: #2d3436;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>آکادمی برنامه‌نویسی محمد طاها</title>
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--light);
-            margin: 0; padding: 0; color: #333; line-height: 1.8;
-        }
+<style>
+:root{
+--primary:#6c5ce7;
+--secondary:#a29bfe;
+--accent:#fd79a8;
+--light:#f9f9f9;
+--dark:#2d3436;
+}
 
-        header {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white; padding: 5rem 1rem; text-align: center;
-            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
-        }
+body{
+font-family:'Segoe UI',Tahoma,Verdana;
+margin:0;
+padding:0;
+background:var(--light);
+line-height:1.8;
+color:#333;
+}
 
-        .container { max-width: 1100px; margin: auto; padding: 2rem; }
+/* هدر */
+header{
+background:linear-gradient(135deg,var(--primary),var(--secondary));
+color:white;
+text-align:center;
+padding:5rem 1rem;
+clip-path:polygon(0 0,100% 0,100% 85%,0 100%);
+}
 
-        /* استایل کارت‌های دوره با آیکون */
-        .grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px; margin: 3rem 0;
-        }
+header h1{
+margin:0;
+font-size:2.3rem;
+}
 
-        .card {
-            background: white; border-radius: 20px; padding: 2rem;
-            text-align: center; transition: 0.4s ease; box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-            border-bottom: 5px solid var(--secondary);
-            position: relative; overflow: hidden;
-        }
+/* کانتینر */
+.container{
+max-width:1200px;
+margin:auto;
+padding:2rem;
+}
 
-        .card:hover { transform: translateY(-10px); border-bottom-color: var(--accent); }
-        
-        .card-icon { font-size: 3rem; margin-bottom: 1rem; display: block; }
+/* تیتر */
+.section-title{
+text-align:center;
+margin:2rem 0;
+color:var(--dark);
+}
 
-        .card h3 { color: var(--primary); margin-bottom: 10px; }
-        .card p { font-size: 0.95rem; color: #666; }
+/* کارت‌ها */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin:2rem 0;
+}
 
-        /* بخش درباره مدرس با جزئیات */
-        .about-section {
-            background: #fff; border-radius: 30px; padding: 3rem;
-            margin: 4rem 0; box-shadow: 0 20px 40px rgba(0,0,0,0.05);
-            border-right: 10px solid var(--primary);
-        }
+.card{
+background:white;
+border-radius:20px;
+padding:1.5rem;
+text-align:center;
+box-shadow:0 10px 20px rgba(0,0,0,0.05);
+transition:.4s;
+border-bottom:5px solid var(--secondary);
+}
 
-        .about-section h2 { color: var(--primary); font-size: 2rem; margin-bottom: 20px; }
-        
-        .skills-container { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
-        .skill-tag {
-            background: #f0edff; color: var(--primary); padding: 8px 20px;
-            border-radius: 50px; font-weight: bold; font-size: 0.9rem; border: 1px solid var(--secondary);
-        }
+.card:hover{
+transform:translateY(-10px);
+border-bottom-color:var(--accent);
+}
 
-        /* بخش پروژه برتر */
-        .project-highlight {
-            background: linear-gradient(white, #f0edff); border-radius: 30px; padding: 3rem;
-            margin: 4rem 0; text-align: center; border: 2px solid var(--secondary);
-        }
-        .project-img {
-            max-width: 80%; border-radius: 20px; margin-top: 2rem;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15); border: 5px solid white;
-        }
+.card-icon{
+font-size:2.5rem;
+display:block;
+margin-bottom:1rem;
+}
 
-        /* بخش تالار گفتگو */
-        .contact-section {
-            background: var(--dark); color: white; border-radius: 30px; padding: 4rem 2rem;
-            margin: 4rem 0; text-align: center;
-        }
+.card h3{
+color:var(--primary);
+margin-bottom:10px;
+}
 
-        .btn-contact {
-            display: inline-block; background: var(--accent); color: white;
-            padding: 20px 50px; border-radius: 60px; text-decoration: none;
-            font-weight: bold; font-size: 1.4rem; transition: 0.3s;
-            box-shadow: 0 10px 25px rgba(253, 121, 168, 0.4); margin-top: 25px;
-        }
+/* درباره مدرس */
+.about{
+background:white;
+border-radius:30px;
+padding:3rem;
+margin:4rem 0;
+box-shadow:0 20px 40px rgba(0,0,0,0.05);
+border-right:10px solid var(--primary);
+}
 
-        .btn-contact:hover { transform: scale(1.1) rotate(-2deg); }
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:20px;
+}
 
-        footer { text-align: center; padding: 3rem; color: #888; }
-    </style>
+.skill{
+background:#f0edff;
+color:var(--primary);
+padding:8px 18px;
+border-radius:50px;
+font-size:0.85rem;
+font-weight:bold;
+border:1px solid var(--secondary);
+}
+
+/* پروژه */
+.project{
+background:linear-gradient(white,#f0edff);
+border-radius:30px;
+padding:3rem;
+margin:4rem 0;
+text-align:center;
+border:2px solid var(--secondary);
+}
+
+.project img{
+max-width:80%;
+border-radius:20px;
+margin-top:2rem;
+box-shadow:0 15px 35px rgba(0,0,0,0.15);
+border:5px solid white;
+}
+
+/* تماس */
+.contact{
+background:var(--dark);
+color:white;
+border-radius:30px;
+padding:4rem 2rem;
+margin:4rem 0;
+text-align:center;
+}
+
+.btn{
+display:inline-block;
+background:var(--accent);
+color:white;
+padding:18px 50px;
+border-radius:60px;
+text-decoration:none;
+font-size:1.2rem;
+font-weight:bold;
+margin-top:25px;
+transition:.3s;
+box-shadow:0 10px 25px rgba(253,121,168,0.4);
+}
+
+.btn:hover{
+transform:scale(1.1);
+}
+
+footer{
+text-align:center;
+padding:3rem;
+color:#888;
+}
+</style>
 </head>
+
 <body>
 
-    <header>
-        <h1>🚀 آکادمی برنامه‌نویسی محمد طاها</h1>
-        <p>جایی که کدها به واقعیت تبدیل می‌شوند</p>
-    </header>
+<header>
+<h1>🚀 آکادمی برنامه‌نویسی محمد طاها</h1>
+<p>جایی که کدها به واقعیت تبدیل می‌شوند</p>
+</header>
 
-    <div class="container">
-        
-        <div class="grid">
-            <div class="card">
-                <span class="card-icon">🐱</span>
-                <h3>Scratch Jr & 3</h3>
-                <p>آموزش بازی‌سازی بصری، انیمیشن‌سازی و یادگیری اصول منطق برنامه‌نویسی با شخصیت‌های دوست‌داشتنی اسکرچ.</p>
-            </div>
-            <div class="card">
-                <span class="card-icon">🤖</span>
-                <h3>رباتیک (mBlock)</h3>
-                <p>ترکیب کدنویسی با دنیای واقعی؛ یادگیری کنترل سنسورها، موتورها و ساخت ربات‌های هوشمند با پلتفرم mBlock.</p>
-            </div>
-            <div class="card">
-                <span class="card-icon">🐍</span>
-                <h3>Python</h3>
-                <p>ورود به دنیای حرفه‌ای‌ها؛ یادگیری زبان پایتون برای حل مسائل پیچیده، هوش مصنوعی و تحلیل داده‌ها.</p>
-            </div>
-            <div class="card">
-                <span class="card-icon">🧠</span>
-                <h3>هوش مصنوعی</h3>
-                <p>آشنایی با مدل‌های یادگیری ماشین و چگونگی ساخت نرم‌افزارهایی که مثل انسان فکر می‌کنند.</p>
-            </div>
-        </div>
+<div class="container">
 
-        <div class="about-section">
-            <h2>👨‍🏫 درباره مدرس (محمد طاها)</h2>
-            <p>سلام! من <strong>محمد طاها</strong> هستم. مسیر من در دنیای تکنولوژی با کنجکاوی در مورد چگونگی کارکرد دستگاه‌ها شروع شد. من معتقدم برنامه‌نویسی فقط کد زدن نیست، بلکه ابزاری برای حل مشکلات بزرگ است.</p>
-            <p><strong>مهارت‌های من:</strong> من تسلط کاملی بر مهارت‌های هفت‌گانه کامپیوتر (ICDL) دارم و در حوزه رباتیک، هم در بخش مکانیک و هم الکترونیک تخصص دارم. همچنین مربی و مدرس زبان‌های اسکرچ و mBlock هستم و در حال توسعه پروژه‌های هوش مصنوعی با پایتون می‌باشم.</p>
-            
-            <div class="skills-container">
-                <span class="skill-tag">🏆 مدرک ICDL 1 & 2</span>
-                <span class="skill-tag">⚙️ مکانیک رباتیک</span>
-                <span class="skill-tag">⚡ الکترونیک</span>
-                <span class="skill-tag">🐍 Python Pro</span>
-                <span class="skill-tag">🎨 UI/UX Design</span>
-                <span class="skill-tag">🤖 mBlock Mentor</span>
-                <span class="skill-tag">🌐 HTML5 / CSS3</span>
-            </div>
-        </div>
+<h2 class="section-title">📚 دوره‌های آموزشی</h2>
 
-        <div class="project-highlight">
-            <h2>🎮 پروژه برتر ماه</h2>
-            <p>اینجا ویترینی از بهترین پروژه‌های ساخته شده در آکادمی است.</p>
-            <!-- محمد طاها، وقتی عکس بازیت رو فرستادی، آدرسش رو میذاریم اینجا -->
-            <img src="https://via.placeholder.com/800x450.png?text=Coming+Soon:+Mohamad+Taha's+Epic+Game" alt="پروژه محمد طاها" class="project-img">
-            <p style="margin-top: 15px; font-style: italic;">"منتظر رونمایی از بازی جدید من باشید..."</p>
-        </div>
+<div class="grid">
 
-        <div class="contact-section">
-            <h2>💬 تالار گفتگو و پرسش‌وپاسخ</h2>
-            <p>هر سوالی در مورد دوره‌ها، پروژه‌ها یا دنیای برنامه‌نویسی داری، از من بپرس!</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeQaF223gdlD45e6BoCSRr9yQcGzXP4FdyEHSO7Tf3syiAGxQ/viewform" target="_blank" class="btn-contact">
-                شروع گفتگو با محمد طاها
-            </a>
-        </div>
+<div class="card">
+<span class="card-icon">🧒</span>
+<h3>Scratch Jr</h3>
+<p>آموزش برنامه‌نویسی پایه برای کودکان با محیط کاملاً تصویری.</p>
+</div>
 
-    </div>
+<div class="card">
+<span class="card-icon">🐱</span>
+<h3>Scratch 3.0</h3>
+<p>ساخت بازی، انیمیشن و داستان تعاملی با گربه محبوب اسکرچ.</p>
+</div>
 
-    <footer>
-        <p>تمامی حقوق برای آکادمی محمد طاها محفوظ است | ۲۰۲۶</p>
-    </footer>
+<div class="card">
+<span class="card-icon">🤖</span>
+<h3>mBlock & Robotics</h3>
+<p>یادگیری رباتیک، سنسورها و ساخت پروژه‌های واقعی.</p>
+</div>
+
+<div class="card">
+<span class="card-icon">🐍</span>
+<h3>Python</h3>
+<p>آموزش حرفه‌ای پایتون برای توسعه، هوش مصنوعی و پروژه‌های پیشرفته.</p>
+</div>
+
+<div class="card">
+<span class="card-icon">🧠</span>
+<h3>هوش مصنوعی</h3>
+<p>آشنایی با یادگیری ماشین و ساخت سیستم‌های هوشمند.</p>
+</div>
+
+</div>
+
+<div class="about">
+<h2>👨‍🏫 درباره مدرس (محمد طاها)</h2>
+<p>من محمد طاها هستم، مدرس برنامه‌نویسی و علاقه‌مند به دنیای تکنولوژی. هدف من آموزش مفهومی و کاربردی مهارت‌های دیجیتال به نسل آینده است.</p>
+
+<div class="skills">
+<span class="skill">🏆 ICDL 1 & 2</span>
+<span class="skill">⚙️ مکانیک رباتیک</span>
+<span class="skill">⚡ الکترونیک</span>
+<span class="skill">🐍 Python Developer</span>
+<span class="skill">🐱 Scratch Instructor</span>
+<span class="skill">🤖 mBlock Expert</span>
+<span class="skill">🌐 HTML / CSS</span>
+</div>
+</div>
+
+<div class="project">
+<h2>🎮 پروژه برتر ماه</h2>
+<p>به زودی بهترین پروژه ساخته شده در آکادمی اینجا نمایش داده می‌شود.</p>
+<img src="https://via.placeholder.com/800x450.png?text=Coming+Soon" alt="پروژه برتر">
+</div>
+
+<div class="contact">
+<h2>💬 تالار گفتگو و پرسش‌وپاسخ</h2>
+<p>هر سوالی داری از طریق فرم زیر بپرس.</p>
+
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSeQaF223gdlD45e6BoCSRr9yQcGzXP4FdyEHSO7Tf3syiAGxQ/viewform" 
+target="_blank" 
+class="btn">
+شروع گفتگو با محمد طاها
+</a>
+
+</div>
+
+</div>
+
+<footer>
+تمامی حقوق محفوظ است © ۲۰۲۶ | طراحی شده توسط محمد طاها
+</footer>
 
 </body>
 </html>
