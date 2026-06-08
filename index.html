@@ -1,254 +1,34 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>آکادمی برنامه‌نویسی محمد طاها</title>
-
-<style>
-:root{
---primary:#6c5ce7;
---secondary:#a29bfe;
---accent:#fd79a8;
---light:#f9f9f9;
---dark:#2d3436;
-}
-
-body{
-font-family:'Segoe UI',Tahoma,Verdana;
-margin:0;
-padding:0;
-background:var(--light);
-line-height:1.8;
-color:#333;
-}
-
-/* هدر */
-header{
-background:linear-gradient(135deg,var(--primary),var(--secondary));
-color:white;
-text-align:center;
-padding:5rem 1rem;
-clip-path:polygon(0 0,100% 0,100% 85%,0 100%);
-}
-
-header h1{
-margin:0;
-font-size:2.3rem;
-}
-
-/* کانتینر */
-.container{
-max-width:1200px;
-margin:auto;
-padding:2rem;
-}
-
-/* تیتر */
-.section-title{
-text-align:center;
-margin:2rem 0;
-color:var(--dark);
-}
-
-/* کارت‌ها */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-margin:2rem 0;
-}
-
-.card{
-background:white;
-border-radius:20px;
-padding:1.5rem;
-text-align:center;
-box-shadow:0 10px 20px rgba(0,0,0,0.05);
-transition:.4s;
-border-bottom:5px solid var(--secondary);
-}
-
-.card:hover{
-transform:translateY(-10px);
-border-bottom-color:var(--accent);
-}
-
-.card-icon{
-font-size:2.5rem;
-display:block;
-margin-bottom:1rem;
-}
-
-.card h3{
-color:var(--primary);
-margin-bottom:10px;
-}
-
-/* درباره مدرس */
-.about{
-background:white;
-border-radius:30px;
-padding:3rem;
-margin:4rem 0;
-box-shadow:0 20px 40px rgba(0,0,0,0.05);
-border-right:10px solid var(--primary);
-}
-
-.skills{
-display:flex;
-flex-wrap:wrap;
-gap:10px;
-margin-top:20px;
-}
-
-.skill{
-background:#f0edff;
-color:var(--primary);
-padding:8px 18px;
-border-radius:50px;
-font-size:0.85rem;
-font-weight:bold;
-border:1px solid var(--secondary);
-}
-
-/* پروژه */
-.project{
-background:linear-gradient(white,#f0edff);
-border-radius:30px;
-padding:3rem;
-margin:4rem 0;
-text-align:center;
-border:2px solid var(--secondary);
-}
-
-.project img{
-max-width:80%;
-border-radius:20px;
-margin-top:2rem;
-box-shadow:0 15px 35px rgba(0,0,0,0.15);
-border:5px solid white;
-}
-
-/* تماس */
-.contact{
-background:var(--dark);
-color:white;
-border-radius:30px;
-padding:4rem 2rem;
-margin:4rem 0;
-text-align:center;
-}
-
-.btn{
-display:inline-block;
-background:var(--accent);
-color:white;
-padding:18px 50px;
-border-radius:60px;
-text-decoration:none;
-font-size:1.2rem;
-font-weight:bold;
-margin-top:25px;
-transition:.3s;
-box-shadow:0 10px 25px rgba(253,121,168,0.4);
-}
-
-.btn:hover{
-transform:scale(1.1);
-}
-
-footer{
-text-align:center;
-padding:3rem;
-color:#888;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آموزش برنامه نویسی و کامپیوتر با محمد طاها | مرجع یادگیری نردها</title>
+    <meta name="description" content="آموزش تخصصی کامپیوتر و برنامه‌نویسی از صفر برای دانش‌آموزان با محمد طاها">
+    <meta name="keywords" content="محمد طاها, آموزش برنامه نویسی, کامپیوتر, HTML">
 </head>
-
 <body>
 
-<header>
-<h1>🚀 آکادمی برنامه‌نویسی محمد طاها</h1>
-<p>جایی که کدها به واقعیت تبدیل می‌شوند</p>
-</header>
+    <h1>به وب‌سایت محمد طاها خوش آمدید</h1>
+    
+    <p>در این وب‌سایت قرار است با هم دنیای کدها را کشف کنیم!</p>
 
-<div class="container">
+    <div style="margin-top: 20px; padding: 15px; background-color: #f0f0f0; border-radius: 8px;">
+        <p>برای مشاهده ویدیوهای آموزشی من، روی لینک زیر کلیک کنید:</p>
+        <a href="https://www.aparat.com/16147331" target="_blank" style="color: blue; text-decoration: none; font-weight: bold;">
+            📺 ورود به کانال آپارات محمد طاها
+        </a>
+    </div>
 
-<h2 class="section-title">📚 دوره‌های آموزشی</h2>
-
-<div class="grid">
-
-<div class="card">
-<span class="card-icon">🧒</span>
-<h3>Scratch Jr</h3>
-<p>آموزش برنامه‌نویسی پایه برای کودکان با محیط کاملاً تصویری.</p>
-</div>
-
-<div class="card">
-<span class="card-icon">🐱</span>
-<h3>Scratch 3.0</h3>
-<p>ساخت بازی، انیمیشن و داستان تعاملی با گربه محبوب اسکرچ.</p>
-</div>
-
-<div class="card">
-<span class="card-icon">🤖</span>
-<h3>mBlock & Robotics</h3>
-<p>یادگیری رباتیک، سنسورها و ساخت پروژه‌های واقعی.</p>
-</div>
-
-<div class="card">
-<span class="card-icon">🐍</span>
-<h3>Python</h3>
-<p>آموزش حرفه‌ای پایتون برای توسعه، هوش مصنوعی و پروژه‌های پیشرفته.</p>
-</div>
-
-<div class="card">
-<span class="card-icon">🧠</span>
-<h3>هوش مصنوعی</h3>
-<p>آشنایی با یادگیری ماشین و ساخت سیستم‌های هوشمند.</p>
-</div>
-
-</div>
-
-<div class="about">
-<h2>👨‍🏫 درباره مدرس (محمد طاها)</h2>
-<p>من محمد طاها هستم، مدرس برنامه‌نویسی و علاقه‌مند به دنیای تکنولوژی. هدف من آموزش مفهومی و کاربردی مهارت‌های دیجیتال به نسل آینده است.</p>
-
-<div class="skills">
-<span class="skill">🏆 ICDL 1 & 2</span>
-<span class="skill">⚙️ مکانیک رباتیک</span>
-<span class="skill">⚡ الکترونیک</span>
-<span class="skill">🐍 Python Developer</span>
-<span class="skill">🐱 Scratch Instructor</span>
-<span class="skill">🤖 mBlock Expert</span>
-<span class="skill">🌐 HTML / CSS</span>
-</div>
-</div>
-
-<div class="project">
-<h2>🎮 پروژه برتر ماه</h2>
-<p>به زودی بهترین پروژه ساخته شده در آکادمی اینجا نمایش داده می‌شود.</p>
-<img src="https://via.placeholder.com/800x450.png?text=Coming+Soon" alt="پروژه برتر">
-</div>
-
-<div class="contact">
-<h2>💬 تالار گفتگو و پرسش‌وپاسخ</h2>
-<p>هر سوالی داری از طریق فرم زیر بپرس.</p>
-
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSeQaF223gdlD45e6BoCSRr9yQcGzXP4FdyEHSO7Tf3syiAGxQ/viewform" 
-target="_blank" 
-class="btn">
-شروع گفتگو با محمد طاها
-</a>
-
-</div>
-
-</div>
-
-<footer>
-تمامی حقوق محفوظ است © ۲۰۲۶ | طراحی شده توسط محمد طاها
-</footer>
+    <div style="margin-top: 20px; padding: 15px; background-color: #ffffff; border-radius: 8px; line-height: 1.9;">
+        <h2>درباره مدرس</h2>
+        <p>
+            محمد طاها یک دانش‌آموز علاقه‌مند به دنیای کامپیوتر و برنامه‌نویسی است که با اشتیاق زیاد در حال یادگیری مهارت‌های جدید و ساختن مسیر حرفه‌ای خودش در حوزه فناوری است.
+            او تلاش می‌کند مفاهیم برنامه‌نویسی را به زبان ساده، روشن و قابل فهم یاد بگیرد و آن‌ها را در مسیر آموزش و پروژه‌های واقعی به کار ببرد.
+            علاقه او به کامپیوتر فقط در حد یادگیری تئوری نیست، بلکه همیشه دوست دارد با تمرین، تجربه و ساختن پروژه‌های عملی، دانش خودش را عمیق‌تر کند.
+            هدف محمد طاها این است که در آینده بتواند آموزش‌هایی مفید، ساده و کاربردی برای دیگر علاقه‌مندان به برنامه‌نویسی ارائه دهد و یک فضای آموزشی حرفه‌ای و دوست‌داشتنی بسازد.
+        </p>
+    </div>
 
 </body>
 </html>
